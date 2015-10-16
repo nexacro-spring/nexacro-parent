@@ -77,7 +77,7 @@
                         <encoding>${encoding}</encoding>
                     </configuration>
                 </plugin>
-                <!-- Package 설정 -->
+                <!-- war 설정 -->
                 <plugin>
                     <artifactId>maven-war-plugin</artifactId>
                     <version>2.2</version>
@@ -155,10 +155,11 @@
                                 </configuration>
                             </plugin>
                             <!-- PMD manven plugin -->
+                            <!-- PMD ruleset 2.0 은 version 3.0 이상 -->
+                            <!-- 
                             <plugin>
                                 <groupId>org.apache.maven.plugins</groupId>
                                 <artifactId>maven-pmd-plugin</artifactId>
-                                <!-- PMD ruleset 2.0 은 version 3.0 이상 -->
                                 <version>3.5</version>
                                 <configuration>
                                     <rulesets>
@@ -170,6 +171,7 @@
                                     <targetJdk>${jdk.version}</targetJdk>
                                 </configuration>
                             </plugin>
+                             -->
                         </reportPlugins>
                     </configuration>
                 </plugin>
@@ -250,7 +252,7 @@
 			<version>1.8.0</version>
 		</dependency>
 		
-		<!-- Configuration 설정 dependency.. -->
+		<!-- Configuration jasypt 설정 dependency.. -->
 		<dependency>
 			<groupId>org.jasypt</groupId>
 			<artifactId>jasypt-spring3</artifactId>
@@ -260,6 +262,13 @@
 			<groupId>commons-lang</groupId>
 			<artifactId>commons-lang</artifactId>
 			<version>2.6</version>
+		</dependency>
+		
+		<!-- Logging -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${org.slf4j-version}</version>
 		</dependency>
 		
 	</dependencies>
