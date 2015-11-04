@@ -326,6 +326,7 @@
     <modules>
     	<module>../nexacro-core</module>
     	<module>../nexacro-excel</module>
-    	<module>../nexacro-orm</module>
+    	
+    	<module>../nexacro-dataaccess</module>
     </modules>
 </project>
