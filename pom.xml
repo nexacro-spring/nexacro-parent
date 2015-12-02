@@ -15,6 +15,16 @@
     </properties>
   
   <repositories>
+  		<repository>
+			<id>tobesoft</id>
+			<url>http://cacao.tobesoft.co.kr/nexus/content/groups/public/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
 		<repository>
 			<id>mvn2</id>
 			<url>http://repo1.maven.org/maven2/</url>
@@ -311,22 +321,24 @@
 
     <!-- upload 대상 url (공통 jar 개발시) -->
     <distributionManagement>
+		<!--         
         <repository>
             <id>releases</id>
             <name>releases</name>
             <url>http://${url.ip}:${url.port}/nexus/content/repositories/releases</url>
         </repository>
+         
         <snapshotRepository>
             <id>snapshots</id>
             <name>snapshots</name>
             <url>http://${url.ip}:${url.port}/nexus/content/repositories/snapshots</url>
         </snapshotRepository>
+        -->
     </distributionManagement>
 
     <modules>
     	<module>../nexacro-core</module>
     	<module>../nexacro-excel</module>
-    	
     	<module>../nexacro-dataaccess</module>
     </modules>
 </project>
