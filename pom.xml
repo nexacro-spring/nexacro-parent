@@ -73,6 +73,19 @@
         <finalName>${project.artifactId}-${project.version}</finalName>
         <pluginManagement>
             <plugins>
+            	<!-- source 설정 -->
+	            <plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-source-plugin</artifactId>
+					<executions>
+						<execution>
+							<id>attach-sources</id>
+							<goals>
+								<goal>jar</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
                 <!-- Compiler 설정 -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
